@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="1200" height="1000" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var side= Math.floor(Math.random()*500);
+
+        //ctx.rect(Math.floor(Math.random()*300),Math.floor(Math.random()*300),side,side)
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    ctx.fillStyle=getRandomColor();
+
+    if((Math.floor(Math.random()*99))%2==0)
+    {
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.fillRect(Math.floor(Math.random() *800), Math.floor(Math.random() * 450), side, side);
+        ctx.stroke();
+        ctx.id="rectangle";
+    }
+    else
+    {
+
+        ctx.beginPath();
+        ctx.arc((Math.random() *500)+250, Math.floor(Math.random()*500)+100,Math.floor(Math.random()*100), 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.id="circle";
+    }
+
+    document.getElementById("rectangle").onclick= function () {
+        document.location.reload(true0);
+    }
+
+    document.getElementById("circle").onclick= function () {
+        document.location.reload(true);
+    }
+
+
+</script>
+
+</body>
+</html>

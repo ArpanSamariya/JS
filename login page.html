@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+<h>enter username</h>
+  <input type="text" id="username" >
+  <br><h> password</h>
+  <input type="text" id="password" class="but">
+  <br><button id="login" class="butt">Login</button>
+  <script type="text/javascript">
+      document.getElementById("login").onclick=function () {
+          var username1="";
+          username1= document.getElementById("username").value;
+          var password1="";
+          password1=document.getElementById("password").value;
+          if(username1=="arpan"&& password1=="sam")
+          {
+
+              alert("logged in")
+          }
+          else
+          {
+              alert("Access denied")
+          }
+
+      console.log("login")
+      }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+**console.log()**
+ pass var name or ids to know how they are being loaded and how they work.
+
+**splice(starting index, ending index)**
+
+**splice(starting index, 0 if no deletion and adding , element to be added before starting index)**
+
+**splice(starting index, starting index to replace the 1th element by new , element to be added before starting index)**
